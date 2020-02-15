@@ -4,7 +4,12 @@
   "description": "boilerplate of linter and formatter",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "format": "eslint --fix 'src/**/*.ts{,x}'",
+    "lint": "run-p lint:*",
+    "lint:eslint": "eslint 'src/**/*.ts{,x}'",
+    "lint:style": "stylelint 'src/**/*.ts{,x}'",
+    "lint:tsc": "tsc --noEmit"
   },
   "repository": {
     "type": "git",
@@ -16,11 +21,27 @@
     "url": "https://github.com/nabeliwo/prettier-eslint-stylelint-boilerplate/issues"
   },
   "homepage": "https://github.com/nabeliwo/prettier-eslint-stylelint-boilerplate#readme",
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --fix"
+    ]
+  },
   "devDependencies": {
     "@types/react": "^16.9.19",
     "@types/react-dom": "^16.9.5",
     "@types/styled-components": "^4.4.3",
     "@types/webpack-env": "^1.15.1",
+    "eslint": "^6.8.0",
+    "eslint-config-smarthr": "^4.0.0",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.7",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^1.19.1",
+    "stylelint": "^13.2.0",
+    "stylelint-config-prettier": "^8.0.1",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.10.0",
     "ts-loader": "^6.2.1",
     "typescript": "^3.7.5",
     "webpack": "^4.41.6",
