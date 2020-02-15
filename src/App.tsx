@@ -7,6 +7,7 @@ export const App: FC<{ title: string }> = ({ title }) => (
   <>
     <Title>{title}</Title>
     <Message />
+    {console.log('test')}
   </>
 )
 
