@@ -1,6 +1,8 @@
 # prettier-eslint-stylelint-boilerplate
 
-boilerplate of linter and formatter
+![Node.js CI](https://github.com/nabeliwo/prettier-eslint-stylelint-boilerplate/workflows/Node.js%20CI/badge.svg)
+
+boilerplate of linter and formatter.
 
 ## Technology stack
 
