@@ -4,10 +4,7 @@ import ReactDOM from 'react-dom'
 import { App } from './App'
 
 const render = (AppComponent: typeof App) => {
-  ReactDOM.render(
-    <AppComponent title="Hello, World" />,
-    document.getElementById('root'),
-  )
+  ReactDOM.render(<AppComponent title="Hello, World" />, document.getElementById('root'))
 }
 
 render(App)
